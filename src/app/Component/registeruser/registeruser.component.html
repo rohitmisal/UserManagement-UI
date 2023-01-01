@@ -1,0 +1,79 @@
+
+
+      {{msg}}
+<br />
+<div class="col-md-5 offset-md-4">
+  <h2>Registration Form</h2>
+
+  <form [formGroup]="registerFormGroup" (ngSubmit)="onSubmit()">
+    <div formGroupName="basicUserDetails" class="form-area">
+      <label>First Name</label>
+      <input
+        type="text"
+        class="form-control"
+        name="firstName"
+        id="firstName"
+        placeholder="Enter first Name"
+        formControlName="firstName"
+      />
+
+      <label>Last Name</label>
+      <input
+        type="text"
+        class="form-control"
+        name="lasttName"
+        id="lastName"
+        placeholder="Enter lastName"
+        formControlName="lastName"
+      />
+
+      <label>Email</label>
+      <input
+        type="email"
+        class="form-control"
+        name="email"
+        id="email"
+        placeholder="Enter Email"
+        formControlName="email"
+      />
+
+      <label>Phone No</label>
+      <input
+        type="text"
+        class="form-control"
+        name="phoneNO"
+        id="phoneNO"
+        placeholder="Enter Phone NO"
+        formControlName="phNo"
+      />
+
+      <label>Date of birth</label>
+      <input
+        type="date"
+        class="form-control"
+        name="dob"
+        id="dob"
+        placeholder="Enter Date of birth"
+        formControlName="date"
+      />
+      <br>
+      <label>
+        <input type="radio" value="Male" formControlName="gender" />
+        <span>Male</span>
+      </label>
+      <label>
+        <input type="radio" value="Female" formControlName="gender" />
+        <span>Female</span>
+      </label>
+    </div>
+
+    <br />
+     
+      <button type="reset" class="btn btn-danger" (click)="reset1()">Reset</button>
+    
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+      <button type="submit" class="btn btn-primary">Submit</button>
+   
+  </form>
+</div>

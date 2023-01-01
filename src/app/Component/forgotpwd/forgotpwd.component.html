@@ -1,0 +1,27 @@
+        {{ msg }}
+
+<br /><br /><br />
+<div class="col-md-5 offset-md-4">
+  <h2>Forgot Password</h2>
+  <br />
+  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+    <div class="form-group">
+      <label>Email</label>
+      <input
+        type="text"
+        class="form-control"
+        name="email"
+        id="email"
+        placeholder="Enter Email"
+        [(ngModel)]="email"
+      />
+    </div>
+
+    <br />
+    <div>
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+    <br />
+    <br />
+  </form>
+</div>

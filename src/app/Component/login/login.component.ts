@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { LoginRequest } from '../login-request';
-import { UserServiceService } from '../user-service.service';
+import { NgForm } from '@angular/forms';
+
 import { Route, Router } from '@angular/router';
+import { LoginRequest } from 'src/app/common/login-request';
+import { UserServiceService } from 'src/app/services/user-service.service';
 
 @Component({
   selector: 'app-login',
@@ -17,9 +19,17 @@ export class LoginComponent {
     private router: Router
   ) {}
 
-  onSubmit() {
+  onSubmit(loginform: NgForm) {
     this.userService.loginUser(this.loginRequest).subscribe((data) => {
       this.msg = data;
     });
+  }
+
+  forgotPwd() {
+    this.router.navigate(['/forgotpwd']);
+  }
+
+  SignUp() {
+    this.router.navigate(['/signup']);
   }
 }
